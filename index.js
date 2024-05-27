@@ -13,6 +13,7 @@ app.get('/fetch-data', async (req, res) => {
           host: 'node-proxy-server.onrender.com',
           port: 443,
         },
+      httpsAgent: new (require('https')).Agent({ rejectUnauthorized: false })
     });
     res.json(response.data);
   } catch (error) {
