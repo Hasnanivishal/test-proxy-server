@@ -10,7 +10,7 @@ app.get('/fetch-data', async (req, res) => {
     const response = await axios.get('https://api.github.com/search/users?q=hasnanivishal&per_page=10&page=1', {
       proxy: {
           protocol: 'https',
-          host: '216.24.57.4',
+          host: 'node-proxy-server.onrender.com',
           port: 443,
         },
     });
